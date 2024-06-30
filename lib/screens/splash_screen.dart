@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_drive_clone/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,18 +11,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  // @override
-  // void initState() {
-  //   Timer(Duration(seconds: 4), () {
-  //     Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => loginScreen(),
-  //       ),
-  //     );
-  //   });
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 4), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const LoginScreen(),
+        ),
+      );
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
